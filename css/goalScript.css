@@ -1,0 +1,347 @@
+/* Main Container Styles  */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, readable font */
+    background-color: #f8f9fa; /* Light grey background */
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark text color */
+}
+
+/*  Goal List Styles  */
+#goal-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0 auto; /* Center the list */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between goals */
+    max-width: 800px; /* Limit width */
+}
+
+#goal-list li {
+    background-color: rgb(246, 247, 248); /* Light card background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Soft shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    width: 100%;
+    box-sizing: border-box;
+    border-left: 5px solid #8c53ff; /* Accent border */
+}
+
+#goal-list li:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.goal-content {
+    flex-grow: 1;
+    padding-right: 20px; /* Space for controls */
+}
+
+.goal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+    word-break: break-word; /* Prevent overflow */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.goal-priority {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/*  Progress Bar System  */
+.progress-system {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Inner shadow */
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #2E7D32); /* Green gradient */
+    width: var(--progress-width, 0%); /* Dynamic width via custom property */
+    transition: width 0.3s ease;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    /* Shimmer animation overlay */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, 
+                rgba(255,255,255,0.2) 0%, 
+                rgba(255,255,255,0.8) 50%, 
+                rgba(255,255,255,0.2) 100%);
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-percent {
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #2d3748;
+}
+
+.progress-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.progress-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-btn.increase {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.progress-btn.decrease {
+    background-color: #f44336;
+    color: white;
+}
+
+.progress-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.progress-btn:active {
+    transform: translateY(0);
+}
+
+/* Add Habit Button */
+#addHabitBtn {
+    background: linear-gradient(to right, #8c53ff, #6A5ACD); /* Purple gradient */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto 40px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#addHabitBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Button Container  */
+#goalBtns-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Popup Overlay Styles */
+#popupContainer {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Overlay priority */
+}
+
+/* Popup Box Content */
+#popup-content {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 400px;
+}
+
+#popup-content h2 {
+    color: #2d3748;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Forms */
+#goalForm, #editGoalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#goalForm label, #editGoalForm label {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+#goalForm input, #goalForm select,
+#editGoalForm input, #editGoalForm select {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Popup Button Container */
+#btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Submit & Close Buttons */
+.submit-btn, #submitBtn, #submitEditBtn {
+    padding: 12px 24px;
+    background: linear-gradient(to right, #8c53ff, #6A5ACD);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+  
+.close-btn, #closeBtn, #closeEditBtn {
+    padding: 12px 24px;
+    background-color: gainsboro;
+    color: #4a5568;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+  
+.submit-btn:hover, #submitBtn:hover, #submitEditBtn:hover {
+    background: linear-gradient(to right, #6A5ACD, #8c53ff);
+    transform: translateY(-1px);
+}
+  
+.close-btn:hover, #closeBtn:hover, #closeEditBtn:hover {
+    background-color: gray;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Edit & Delete Buttons */
+#editBtn, #deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#editBtn {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+#deleteBtn:hover {
+    background-color: #8c55ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+#editBtn:hover {  
+    background-color: #cbd5e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    #goal-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .progress-system {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .progress-controls, #goalBtns-container {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    #popupContainer {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Footer Reset */
+footer {
+    max-width: none !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Force footer to full screen width */
+.full-width-footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
