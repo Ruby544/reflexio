@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Reflexio - Login</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!--CSS for some elements-->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group label {
+            font-weight: 600;
+        }
+        .btn-submit {
+            background: linear-gradient(to right, #4f46e5, #6b21a8);
+            color: white;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background: linear-gradient(to right, #6b21a8, #4f46e5);
+        }
+        .password-container {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+      <!-- Header -->
+      <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5">
+        <div class="container mx-auto text-center">
+            <a href="../index.html"><h1 class="text-3xl font-bold">Reflexio</h1></a>
+        </div>
+    </header> <br><br>
+
+    <!-- Log-in Form -->
+    <main class="container bg-white shadow-lg rounded-lg mt-10 p-8">
+        <h1 class="text-2xl font-bold text-center mb-6">Login into your Account</h1>
+
+        <!-- Display login error message -->
+        <form action="../../php/login_process.php" method="post" class="space-y-4">
+
+            <!-- Username or Email -->
+            <div class="form-group">
+                <label for="username_email" class="block text-gray-700"> Username or Email:</label>
+                <input type="text" id="username_email" name="username_email" 
+                       class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                       required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password" class="block text-gray-700"> Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" 
+                           class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                           required>
+                    <i class="toggle-password fas fa-eye" onclick="togglePassword('password')"></i>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" 
+            class="btn-submit w-full py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300">
+                Login
+            </button>
+        </form>
+
+        <!-- Links for updates -->
+        <p class="mt-4 text-center text-gray-600">Don't have an account? 
+        <a href="signup.html" class="text-blue-600 hover:underline">Sign Up</a>
+        </p> 
+        <p class="mt-4 text-center text-gray-600">Forgot username? 
+            <a href="#" onclick="showModal('updateUsernameModal')" class="text-blue-600 hover:underline">Change username</a>
+        </p> 
+        <p class="mt-4 text-center text-gray-600">Forgot email? 
+            <a href="#" onclick="showModal('updateEmailModal')" class="text-blue-600 hover:underline">Change email</a>
+        </p> 
+        <p class="mt-4 text-center text-gray-600">Forgot password? 
+            <a href="#" onclick="showModal('updatePasswordModal')" class="text-blue-600 hover:underline">Change password</a>
+        </p>         
+    </main> <br><br>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+          <p>&copy; 2025 Reflexio. All rights reserved.</p>
+          <a href="../help.html" class="text-blue-400 hover:underline">Help & Support</a>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Update Username Modal -->
+    <div id="updateUsernameModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button onclick="hideModal('updateUsernameModal')" class="absolute top-2 right-4 text-gray-500 text-xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Update Username</h2>
+            <form id="updateUsernameForm">
+                <input type="email" name="email" placeholder="Enter your email" class="w-full border p-2 mb-2 rounded" required>
+                <input type="password" name="currentPassword" placeholder="Enter your current password" class="w-full border p-2 mb-2 rounded" required>
+                <input type="text" name="newUsername" placeholder="Enter your new username" class="w-full border p-2 mb-4 rounded" required>
+                <button type="submit" class="btn-submit w-full py-2 rounded">Update Username</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Email Modal -->
+    <div id="updateEmailModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button onclick="hideModal('updateEmailModal')" class="absolute top-2 right-4 text-gray-500 text-xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Update Email</h2>
+            <form id="updateEmailForm">
+                <input type="text" name="identifier" placeholder="Enter your current username" class="w-full border p-2 mb-2 rounded" required>
+                <input type="password" name="currentPassword" placeholder="Enter your current password" class="w-full border p-2 mb-2 rounded" required>
+                <input type="email" name="newEmail" placeholder="Enter your new email" class="w-full border p-2 mb-4 rounded" required>
+                <button type="submit" class="btn-submit w-full py-2 rounded">Update Email</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Password Modal -->
+    <div id="updatePasswordModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button onclick="hideModal('updatePasswordModal')" class="absolute top-2 right-4 text-gray-500 text-xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Reset Password</h2>
+            <form id="updatePasswordForm">
+                <input type="text" name="identifier" placeholder="Enter your username or email" class="w-full border p-2 mb-2 rounded" required>
+                <input type="password" name="newPassword" placeholder="Enter your new password" class="w-full border p-2 mb-4 rounded"   pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,12}$"
+                title="The password must contain at least one upper case letter, a number or a special character and it should be long between 8 and 12 characters"
+                minlength="8" maxlength="12"required>  
+                
+                <button type="submit" class="btn-submit w-full py-2 rounded">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the password field
+        function togglePassword(fieldId) {
+            const passwordField = document.getElementById(fieldId); // Get password input field
+            const eyeIcon = passwordField.nextElementSibling; // Get the eye icon next to the input
+    
+            // Toggle between 'text' and 'password' input types
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash"); // Show slashed eye
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye"); // Show normal eye
+            }
+        }
+    
+        // Function to show a modal by removing the 'hidden' class
+        function showModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+    
+        // Function to hide a modal by adding the 'hidden' class
+        function hideModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    
+        // Handle submission of the Update Username form
+        document.getElementById('updateUsernameForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            const data = Object.fromEntries(new FormData(this).entries()); // Convert form data to object
+    
+            // Send POST request with action and form data
+            fetch("../../php/profile/updateCredentials.php", {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: "update_username", ...data })
+            })
+            .then(res => res.json()) // Parse JSON response
+            .then(data => {
+                alert(data.message); // Show response message
+                if (data.status === 'success') hideModal('updateUsernameModal'); // Close modal if successful
+            })
+            .catch(err => alert("An error occurred.")); // Handle errors
+        });
+    
+        // Handle submission of the Update Email form
+        document.getElementById('updateEmailForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            const data = Object.fromEntries(new FormData(this).entries()); // Convert form data to object
+    
+            // Send POST request with action and form data
+            fetch("../../php/profile/updateCredentials.php", {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: "update_email", ...data })
+            })
+            .then(res => res.json()) // Parse JSON response
+            .then(data => {
+                alert(data.message); // Show response message
+                if (data.status === 'success') hideModal('updateEmailModal'); // Close modal if successful
+            })
+            .catch(err => alert("An error occurred.")); // Handle errors
+        });
+    
+        // Handle submission of the Update Password form
+        document.getElementById('updatePasswordForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            const data = Object.fromEntries(new FormData(this).entries()); // Convert form data to object
+    
+            // Send POST request with action and form data
+            fetch("../../php/profile/updateCredentials.php", {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: "update_password", ...data })
+            })
+            .then(res => res.json()) // Parse JSON response
+            .then(data => {
+                alert(data.message); // Show response message
+                if (data.status === 'success') hideModal('updatePasswordModal'); // Close modal if successful
+            })
+            .catch(err => alert("An error occurred.")); // Handle errors
+        });
+    </script>    
+</body>
+</html>

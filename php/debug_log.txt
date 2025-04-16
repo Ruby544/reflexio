@@ -1,0 +1,621 @@
+Testing write access
+[2025-04-12 08:34:20] Session started. Session data: Array
+(
+    [login_error] => Wrong email or password.
+    [logged] => 1
+    [user_id] => 4
+    [username] => ck
+    [username_email] => c.k@gmail.com
+)
+
+[2025-04-12 08:34:20] Received POST: username_email = ck
+[2025-04-12 08:34:20] SQL statement prepared.
+[2025-04-12 08:34:20] Query executed. Rows found: 1
+[2025-04-12 08:34:20] User found: Array
+(
+    [user_id] => 4
+    [surname] => Wang
+    [name] => Emma
+    [birthdate] => 2000-02-20
+    [email] => c.k@gmail.com
+    [username] => ck
+    [password] => $2y$10$jayroqs1EKoMWD6CTdl9heNsJHuEipHgN4di3E5CNmvh1v8WQL3CW
+)
+
+[2025-04-12 08:34:20] ✅ Password verified.
+[2025-04-12 08:34:20] Session after login: Array
+(
+    [login_error] => Wrong email or password.
+    [logged] => 1
+    [user_id] => 4
+    [username] => ck
+    [username_email] => c.k@gmail.com
+)
+
+Testing write access
+[2025-04-12 09:25:29] Session started. Session data: Array
+(
+)
+
+[2025-04-12 09:25:29] Received POST: username_email = ck
+[2025-04-12 09:25:29] SQL statement prepared.
+[2025-04-12 09:25:29] Query executed. Rows found: 1
+[2025-04-12 09:25:29] User found: Array
+(
+    [user_id] => 4
+    [surname] => Wang
+    [name] => Emma
+    [birthdate] => 2000-02-20
+    [email] => c.k@gmail.com
+    [username] => ck
+    [password] => $2y$10$jayroqs1EKoMWD6CTdl9heNsJHuEipHgN4di3E5CNmvh1v8WQL3CW
+)
+
+[2025-04-12 09:25:29] ✅ Password verified.
+[2025-04-12 09:25:29] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 4
+    [username] => ck
+    [username_email] => c.k@gmail.com
+)
+
+Testing write access
+[2025-04-12 10:01:58] Session started. Session data: Array
+(
+)
+
+[2025-04-12 10:01:58] Received POST: username_email = ck
+[2025-04-12 10:01:58] SQL statement prepared.
+[2025-04-12 10:01:58] Query executed. Rows found: 1
+[2025-04-12 10:01:58] User found: Array
+(
+    [user_id] => 4
+    [surname] => Wang
+    [name] => Emma
+    [birthdate] => 2000-02-20
+    [email] => c.k@gmail.com
+    [username] => ck
+    [password] => $2y$10$jayroqs1EKoMWD6CTdl9heNsJHuEipHgN4di3E5CNmvh1v8WQL3CW
+)
+
+[2025-04-12 10:01:58] ✅ Password verified.
+[2025-04-12 10:01:58] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 4
+    [username] => ck
+    [username_email] => c.k@gmail.com
+)
+
+Testing write access
+[2025-04-14 10:06:50] Session started. Session data: Array
+(
+)
+
+[2025-04-14 10:06:50] Received POST: username_email = kk
+[2025-04-14 10:06:50] SQL statement prepared.
+[2025-04-14 10:06:50] Query executed. Rows found: 1
+[2025-04-14 10:06:50] User found: Array
+(
+    [user_id] => 2
+    [surname] => park
+    [name] => ruby
+    [birthdate] => 2004-04-04
+    [email] => cc@ll
+    [username] => kk
+    [password] => $2y$10$QvqzwyeadKg234PnVt/Rq.W
+)
+
+[2025-04-14 10:06:51] ❌ Password verification failed.
+Testing write access
+[2025-04-14 10:06:57] Session started. Session data: Array
+(
+    [login_error] => Wrong email or password.
+)
+
+[2025-04-14 10:06:57] Received POST: username_email = ck
+[2025-04-14 10:06:57] SQL statement prepared.
+[2025-04-14 10:06:57] Query executed. Rows found: 1
+[2025-04-14 10:06:57] User found: Array
+(
+    [user_id] => 4
+    [surname] => Wang
+    [name] => Emma
+    [birthdate] => 2000-02-20
+    [email] => c.k@gmail.com
+    [username] => ck
+    [password] => $2y$10$jayroqs1EKoMWD6CTdl9heNsJHuEipHgN4di3E5CNmvh1v8WQL3CW
+)
+
+[2025-04-14 10:06:57] ✅ Password verified.
+[2025-04-14 10:06:57] Session after login: Array
+(
+    [login_error] => Wrong email or password.
+    [logged] => 1
+    [user_id] => 4
+    [username] => ck
+    [username_email] => c.k@gmail.com
+)
+
+Testing write access
+[2025-04-14 11:22:55] Session started. Session data: Array
+(
+)
+
+[2025-04-14 11:22:55] Received POST: username_email = lollo
+[2025-04-14 11:22:55] SQL statement prepared.
+[2025-04-14 11:22:55] Query executed. Rows found: 1
+[2025-04-14 11:22:55] User found: Array
+(
+    [user_id] => 4
+    [surname] => Wang
+    [name] => Emma
+    [birthdate] => 2000-02-20
+    [email] => nn@kk
+    [username] => lollo
+    [password] => $2y$10$6XJJarUBq8j3V/8y6QfJceJ5uBsc6nRScObtboFtVlxhNqRBfOUuy
+)
+
+[2025-04-14 11:22:55] ✅ Password verified.
+[2025-04-14 11:22:55] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 4
+    [username] => lollo
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 13:33:50] Session started. Session data: Array
+(
+    [logged] => 1
+)
+
+[2025-04-14 13:33:50] Received POST: username_email = luk3
+[2025-04-14 13:33:50] SQL statement prepared.
+[2025-04-14 13:33:50] Query executed. Rows found: 1
+[2025-04-14 13:33:50] User found: Array
+(
+    [user_id] => 5
+    [surname] => Kelly
+    [name] => Luke
+    [birthdate] => 1996-05-01
+    [email] => luk3@yahoo.com
+    [username] => luk3
+    [password] => $2y$10$A2vcd.O.hTbKomxc1n6PLectm0X3JIscr2H0lcMrPpvQW8HfuPdjC
+)
+
+[2025-04-14 13:33:50] ✅ Password verified.
+[2025-04-14 13:33:50] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 5
+    [username] => luk3
+    [username_email] => luk3@yahoo.com
+)
+
+Testing write access
+[2025-04-14 14:23:20] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:23:20] Received POST: username_email = Ross1
+[2025-04-14 14:23:20] SQL statement prepared.
+[2025-04-14 14:23:20] Query executed. Rows found: 1
+[2025-04-14 14:23:20] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:23:20] ✅ Password verified.
+[2025-04-14 14:23:20] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:25:32] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:25:32] Received POST: username_email = Ross1
+[2025-04-14 14:25:32] SQL statement prepared.
+[2025-04-14 14:25:32] Query executed. Rows found: 1
+[2025-04-14 14:25:32] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:25:32] ✅ Password verified.
+[2025-04-14 14:25:32] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:26:08] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:26:08] Received POST: username_email = Ross1
+[2025-04-14 14:26:08] SQL statement prepared.
+[2025-04-14 14:26:08] Query executed. Rows found: 1
+[2025-04-14 14:26:08] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:26:08] ✅ Password verified.
+[2025-04-14 14:26:08] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:27:12] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:27:12] Received POST: username_email = Ross1
+[2025-04-14 14:27:12] SQL statement prepared.
+[2025-04-14 14:27:12] Query executed. Rows found: 1
+[2025-04-14 14:27:12] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:27:12] ✅ Password verified.
+[2025-04-14 14:27:12] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:33:38] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:33:38] Received POST: username_email = Ross1
+[2025-04-14 14:33:38] SQL statement prepared.
+[2025-04-14 14:33:38] Query executed. Rows found: 1
+[2025-04-14 14:33:38] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:33:38] ✅ Password verified.
+[2025-04-14 14:33:38] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:33:53] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:33:53] Received POST: username_email = Ross1
+[2025-04-14 14:33:53] SQL statement prepared.
+[2025-04-14 14:33:53] Query executed. Rows found: 1
+[2025-04-14 14:33:53] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:33:53] ✅ Password verified.
+[2025-04-14 14:33:53] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 14:34:08] Session started. Session data: Array
+(
+)
+
+[2025-04-14 14:34:08] Received POST: username_email = Ross1
+[2025-04-14 14:34:08] SQL statement prepared.
+[2025-04-14 14:34:08] Query executed. Rows found: 1
+[2025-04-14 14:34:08] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 14:34:08] ✅ Password verified.
+[2025-04-14 14:34:08] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 15:08:26] Session started. Session data: Array
+(
+)
+
+[2025-04-14 15:08:26] Received POST: username_email = Ross1
+[2025-04-14 15:08:26] SQL statement prepared.
+[2025-04-14 15:08:26] Query executed. Rows found: 1
+[2025-04-14 15:08:26] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 15:08:27] ✅ Password verified.
+[2025-04-14 15:08:27] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 15:10:31] Session started. Session data: Array
+(
+)
+
+[2025-04-14 15:10:31] Received POST: username_email = Ross1
+[2025-04-14 15:10:31] SQL statement prepared.
+[2025-04-14 15:10:31] Query executed. Rows found: 1
+[2025-04-14 15:10:31] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 15:10:31] ✅ Password verified.
+[2025-04-14 15:10:31] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 15:45:13] Session started. Session data: Array
+(
+)
+
+[2025-04-14 15:45:13] Received POST: username_email = Ross1
+[2025-04-14 15:45:13] SQL statement prepared.
+[2025-04-14 15:45:13] Query executed. Rows found: 1
+[2025-04-14 15:45:13] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 15:45:13] ✅ Password verified.
+[2025-04-14 15:45:13] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-14 20:26:48] Session started. Session data: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+[2025-04-14 20:26:48] Received POST: username_email = Ross1
+[2025-04-14 20:26:48] SQL statement prepared.
+[2025-04-14 20:26:48] Query executed. Rows found: 1
+[2025-04-14 20:26:48] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-14 20:26:48] ✅ Password verified.
+[2025-04-14 20:26:48] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-15 11:17:16] Session started. Session data: Array
+(
+)
+
+[2025-04-15 11:17:16] Received POST: username_email = Ross1
+[2025-04-15 11:17:16] SQL statement prepared.
+[2025-04-15 11:17:16] Query executed. Rows found: 1
+[2025-04-15 11:17:16] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-15 11:17:17] ✅ Password verified.
+[2025-04-15 11:17:17] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+
+Testing write access
+[2025-04-15 11:26:23] Session started. Session data: Array
+(
+)
+
+[2025-04-15 11:26:23] Received POST: username_email = rub
+[2025-04-15 11:26:23] SQL statement prepared.
+[2025-04-15 11:26:23] Query executed. Rows found: 1
+[2025-04-15 11:26:23] User found: Array
+(
+    [user_id] => 2
+    [surname] => park
+    [name] => ruby
+    [birthdate] => 2004-04-04
+    [email] => rub@gmail.com
+    [username] => rub
+    [password] => $2y$10$Y9a1sggtpGrH7ZCtnOY2LeMA2WBhJnWj4MPor3P1B8l30GaJemUfu
+)
+
+[2025-04-15 11:26:23] ✅ Password verified.
+[2025-04-15 11:26:23] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rub
+    [username_email] => rub@gmail.com
+)
+
+Testing write access
+[2025-04-15 11:33:14] Session started. Session data: Array
+(
+)
+
+[2025-04-15 11:33:14] Received POST: username_email = RubSy
+[2025-04-15 11:33:14] SQL statement prepared.
+[2025-04-15 11:33:14] Query executed. Rows found: 1
+[2025-04-15 11:33:14] User found: Array
+(
+    [user_id] => 2
+    [surname] => park
+    [name] => ruby
+    [birthdate] => 2004-04-04
+    [email] => rub@gmail.com
+    [username] => rubsy
+    [password] => $2y$10$RQH.xUdgTboSyjS24Mv2/uINj5CftfueUrZM7SoyIKvxTbhKh0yCq
+)
+
+[2025-04-15 11:33:14] ✅ Password verified.
+[2025-04-15 11:33:14] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+Testing write access
+[2025-04-16 10:12:56] Session started. Session data: Array
+(
+)
+
+[2025-04-16 10:12:56] Received POST: username_email = Ross1
+[2025-04-16 10:12:56] SQL statement prepared.
+[2025-04-16 10:12:56] Query executed. Rows found: 1
+[2025-04-16 10:12:56] User found: Array
+(
+    [user_id] => 6
+    [surname] => Rossi
+    [name] => Stefano
+    [birthdate] => 1990-05-01
+    [email] => nn@kk
+    [username] => Ross1
+    [password] => $2y$10$fClxR0qGXdyYpdC0ZosZbOeZQCzuT2Or02STInv90x7jb1612MXb.
+)
+
+[2025-04-16 10:12:56] ✅ Password verified.
+[2025-04-16 10:12:56] Session after login: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => Ross1
+    [username_email] => nn@kk
+)
+

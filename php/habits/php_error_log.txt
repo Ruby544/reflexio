@@ -1,0 +1,184 @@
+Testing write access
+[2025-04-16 12:32:30] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 12:32:30] User ID: 2
+[2025-04-16 12:32:30] Raw JSON input: {"habitTitle":"Study","numberOfTimes":"4"}
+[2025-04-16 12:32:30] Decoded data: Array
+(
+    [habitTitle] => Study
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 12:32:30] Habit title: 'Study'
+[2025-04-16 12:32:30] Times monthly: 4
+[2025-04-16 12:32:30] Connected to DB successfully.
+[2025-04-16 12:32:30] Habit inserted successfully with ID: 59
+[2025-04-16 12:32:30] DB connection closed.
+[2025-04-16 12:32:30] Final response: {"status":"success","habit_id":59,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 12:48:21] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 12:48:21] User ID: 2
+[2025-04-16 12:48:21] Raw JSON input: {"habitTitle":"Treadmill","numberOfTimes":"4"}
+[2025-04-16 12:48:21] Decoded data: Array
+(
+    [habitTitle] => Treadmill
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 12:48:21] Habit title: 'Treadmill'
+[2025-04-16 12:48:21] Times monthly: 4
+[2025-04-16 12:48:21] Connected to DB successfully.
+[2025-04-16 12:48:21] Habit inserted successfully with ID: 60
+[2025-04-16 12:48:21] DB connection closed.
+[2025-04-16 12:48:21] Final response: {"status":"success","habit_id":60,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 12:48:29] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 12:48:29] User ID: 2
+[2025-04-16 12:48:29] Raw JSON input: {"habitTitle":"Treadmill","numberOfTimes":"4"}
+[2025-04-16 12:48:29] Decoded data: Array
+(
+    [habitTitle] => Treadmill
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 12:48:29] Habit title: 'Treadmill'
+[2025-04-16 12:48:29] Times monthly: 4
+[2025-04-16 12:48:29] Connected to DB successfully.
+[2025-04-16 12:48:29] Habit inserted successfully with ID: 61
+[2025-04-16 12:48:29] DB connection closed.
+[2025-04-16 12:48:29] Final response: {"status":"success","habit_id":61,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 12:48:38] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 12:48:38] User ID: 2
+[2025-04-16 12:48:38] Raw JSON input: {"habitTitle":"Treadmill","numberOfTimes":"4"}
+[2025-04-16 12:48:38] Decoded data: Array
+(
+    [habitTitle] => Treadmill
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 12:48:38] Habit title: 'Treadmill'
+[2025-04-16 12:48:38] Times monthly: 4
+[2025-04-16 12:48:38] Connected to DB successfully.
+[2025-04-16 12:48:38] Habit inserted successfully with ID: 62
+[2025-04-16 12:48:38] DB connection closed.
+[2025-04-16 12:48:38] Final response: {"status":"success","habit_id":62,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 12:48:44] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 12:48:44] User ID: 2
+[2025-04-16 12:48:44] Raw JSON input: {"habitTitle":"Treadmill","numberOfTimes":"4"}
+[2025-04-16 12:48:44] Decoded data: Array
+(
+    [habitTitle] => Treadmill
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 12:48:44] Habit title: 'Treadmill'
+[2025-04-16 12:48:44] Times monthly: 4
+[2025-04-16 12:48:44] Connected to DB successfully.
+[2025-04-16 12:48:44] Habit inserted successfully with ID: 63
+[2025-04-16 12:48:44] DB connection closed.
+[2025-04-16 12:48:44] Final response: {"status":"success","habit_id":63,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 13:29:19] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 6
+    [username] => rub
+    [username_email] => nn@ll
+)
+
+[2025-04-16 13:29:19] User ID: 6
+[2025-04-16 13:29:19] Raw JSON input: {"habitTitle":"Study","numberOfTimes":"4"}
+[2025-04-16 13:29:19] Decoded data: Array
+(
+    [habitTitle] => Study
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 13:29:19] Habit title: 'Study'
+[2025-04-16 13:29:19] Times monthly: 4
+[2025-04-16 13:29:19] Connected to DB successfully.
+[2025-04-16 13:29:19] Habit inserted successfully with ID: 64
+[2025-04-16 13:29:19] DB connection closed.
+[2025-04-16 13:29:19] Final response: {"status":"success","habit_id":64,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 14:09:45] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 2
+    [username] => rubsy
+    [username_email] => rub@gmail.com
+)
+
+[2025-04-16 14:09:45] User ID: 2
+[2025-04-16 14:09:45] Raw JSON input: {"habitTitle":"Study","numberOfTimes":"4"}
+[2025-04-16 14:09:45] Decoded data: Array
+(
+    [habitTitle] => Study
+    [numberOfTimes] => 4
+)
+
+[2025-04-16 14:09:45] Habit title: 'Study'
+[2025-04-16 14:09:45] Times monthly: 4
+[2025-04-16 14:09:45] Connected to DB successfully.
+[2025-04-16 14:09:45] Habit inserted successfully with ID: 65
+[2025-04-16 14:09:45] DB connection closed.
+[2025-04-16 14:09:45] Final response: {"status":"success","habit_id":65,"message":"Habit added successfully"}
+Testing write access
+[2025-04-16 16:23:04] Session contents: Array
+(
+    [logged] => 1
+    [user_id] => 8
+    [username] => rubsy
+    [email] => l@cc
+)
+
+[2025-04-16 16:23:04] User ID: 8
+[2025-04-16 16:23:04] Raw JSON input: {"habitTitle":"Treadmill","numberOfTimes":"3"}
+[2025-04-16 16:23:04] Decoded data: Array
+(
+    [habitTitle] => Treadmill
+    [numberOfTimes] => 3
+)
+
+[2025-04-16 16:23:04] Habit title: 'Treadmill'
+[2025-04-16 16:23:04] Times monthly: 3
+[2025-04-16 16:23:04] Connected to DB successfully.
+[2025-04-16 16:23:04] Habit inserted successfully with ID: 66
+[2025-04-16 16:23:04] DB connection closed.
+[2025-04-16 16:23:04] Final response: {"status":"success","habit_id":66,"message":"Habit added successfully"}

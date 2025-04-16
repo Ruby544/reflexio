@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reflexio - Profile</title>
+
+    <!-- Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Custom JavaScript files (deferred until HTML is parsed) -->
+    <script defer src="../../script/profileScript.js"></script>
+    <script defer src="../../script/logoutScript.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+
+        <!-- Menu Dropdown -->
+        <div class="dropdown py-3 px-8 rounded text-white">
+            <!-- Button to trigger dropdown menu -->
+            <button class="dropbtn bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">Menu</button>
+            <div class="dropdown-content bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+                <!-- Menu items with icons -->
+                <a href="../features/journal.html"><i class="fas fa-book mr-2"></i>Journal</a>
+                <a href="../features/goals.html"><i class="fas fa-bullseye mr-2"></i>Goals</a>
+                <a href="../features/habit.html"><i class="fas fa-calendar-alt mr-2"></i>Habits</a>
+            </div>
+        </div>
+
+        <!-- Reflexio Title (centered) -->
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="../dashboard.html">
+                <!-- Title of the app centered on the page -->
+                <h1 class="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2" id="reflexio-title">Reflexio</h1>
+            </a>
+        </div>
+
+        <!-- Profile Dropdown -->
+        <div class="dropdown py-3 px-8 rounded text-white">
+            <!-- Button to trigger profile dropdown menu -->
+            <button class="dropbtn bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">Profile</button>
+            <div class="dropdown-content bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+                <!-- Profile menu options -->
+                <a href="../login/profile.html">My Profile</a>
+                <a href="#" onclick="logout()" class="text-red-500">Log-out</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- Main Container -->
+<main class="flex-grow" style="padding-top: 5%; padding-bottom: 5%;">
+    <div class="container mx-auto p-6">
+        <h1 class="text-2xl font-semibold mb-4">My Profile</h1>
+
+        <!-- Username Update Section -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 transform transition duration-300 hover:scale-105">
+            <h2 class="text-xl font-semibold mb-4">Change Profile Information</h2>
+            <form id="profileForm">
+                <div class="mb-4">
+                    <!-- Label and input for updating username -->
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" class="w-full p-2 border rounded" placeholder="Enter your new username" required>
+                </div>
+                <!-- Submit button for username form -->
+                <button type="submit" class="submit-btn">Save Changes</button>
+
+                <br><br>
+                <!-- Status message for username update -->
+                <div id="usernameStatus" class="status hidden"></div>  
+            </form>
+        </div>
+
+        <!-- Email Update Section -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 transform transition duration-300 hover:scale-105">
+            <form id="emailForm">
+                <div class="mb-4">
+                    <!-- Label and input for updating email -->
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded" placeholder="Enter your new email" required>
+                </div>
+                <!-- Submit button for email form -->
+                <button type="submit" class="submit-btn">Save Changes</button>
+
+                <br><br>
+                <!-- Status message for email update -->
+                <div id="emailStatus" class="status hidden"></div>  
+            </form>
+        </div>
+
+        <!-- Password Change Section -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 transform transition duration-300 hover:scale-105">
+            <h2 class="text-xl font-semibold mb-4">Change Password</h2>
+            <form id="passwordForm">
+                
+                <!-- Forgot Password Toggle -->
+                <div class="mb-4 flex items-center">
+                    <input type="checkbox" id="forgotPasswordCheckbox" class="mr-2">
+                    <label for="forgotPasswordCheckbox" class="text-sm text-gray-700">I forgot my current password</label>
+                </div>
+
+                <!-- Current Password Field -->
+                <div class="mb-4">
+                    <!-- Label and input for current password -->
+                    <label for="currentPassword" class="block text-sm font-medium text-gray-700">Current Password</label>
+                    <input type="password" id="currentPassword" name="currentPassword" class="w-full p-2 border rounded" placeholder="Enter your current password">
+                    <!-- Icon to toggle password visibility -->
+                    <i class="toggle-password fas fa-eye" onclick="togglePassword('currentPassword')"></i>
+                </div>
+
+                <!-- New Password Field -->
+                <div class="mb-4">
+                    <!-- Label and input for new password -->
+                    <label for="newPassword" class="block text-sm font-medium text-gray-700">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" class="w-full p-2 border "
+                    pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,12}$"
+    title="The password must contain at least one upper case letter, a number or a special character and it should be long between 8 and 12 characters"
+    minlength="8" maxlength="12" rounded" placeholder="Enter your new password" required>
+                    <!-- Icon to toggle password visibility -->
+                    <i class="toggle-password fas fa-eye" onclick="togglePassword('newPassword')"></i>
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="mb-4">
+                    <!-- Label and input for confirming new password -->
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="w-full p-2 border rounded" placeholder="Confirm your new password" required>
+                    <!-- Icon to toggle password visibility -->
+                    <i class="toggle-password fas fa-eye" onclick="togglePassword('confirmPassword')"></i>
+                </div>
+
+                <!-- Submit button for password change -->
+                <button type="submit" class="submit-btn">Change Password</button>
+
+                <br><br>
+                <!-- Status message for password change -->
+                <div id="passwordStatus" class="status hidden"></div>  
+            </form>
+        </div>
+
+        <!-- Delete Account Section -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 transform transition duration-300 hover:scale-105">
+            <h2 class="text-xl font-semibold mb-4 text-red-500">Delete Account</h2>
+            <p class="text-sm text-gray-700 mb-4">Are you sure you want to delete your account? This action cannot be undone.</p>
+            <!-- Button to trigger account deletion -->
+            <button id="deleteAccountBtn" class="bg-red-500 text-white p-2 rounded">Delete Account</button>
+        </div>
+
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer class="w-full bg-gray-800 mt-auto">
+    <div class="mx-auto text-center text-white py-6">
+        <p>&copy; 2025 Reflexio. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

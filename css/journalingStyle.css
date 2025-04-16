@@ -1,0 +1,178 @@
+/* Calendar Day Cell Styles */
+.calendar-day {
+    min-height: 120px; /* Minimum height for each day box */
+    border: 1px solid #e2e8f0; /* Light gray border */
+    padding: 4px;
+    position: relative;
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+}
+
+/* Column layout for each day inside a calendar row */
+.calendar-row > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Weekly Row Layout - 7 columns for 7 days */
+.calendar-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+    width: 100%;
+}
+
+/* Calendar Hover Effect */
+.calendar-day:hover {
+    background-color: #f8fafc; /* Light background on hover */
+}
+
+/* Main calendar container - dynamic row heights */
+#calendarGrid {
+    grid-auto-rows: minmax(min-content, auto); /* Rows grow as needed */
+}
+
+/* Highlight days that have journal entries */
+.calendar-day.has-entries {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+/* Container for journal entries inside a day */
+.entries-container {
+    max-height: calc(100% - 30px); /* Leaves space for day number and add button */
+    overflow-y: auto; /* Scroll if entries exceed available space */
+    scrollbar-width: thin; /* Thinner scrollbar */
+}
+
+/* Individual journal entry inside a day cell */
+.journal-entry {
+    margin-bottom: 2px;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: #f0f9ff; /* Light blue */
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long text */
+    line-height: 1.3; /* More readable spacing */
+}
+
+/* Hover effect for journal entries */
+.journal-entry:hover {
+    background-color: #e0f2fe;
+}
+
+/* Add journal entry button inside a calendar day */
+.add-journal-btn {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s;
+    background: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Show add button on day hover */
+.calendar-day:hover .add-journal-btn {
+    opacity: 1;
+}
+
+/* Transition for popup appearance */
+#journalPopup {
+    transition: all 0.3s ease;
+}
+
+/* Popup content area - horizontal scroll and max height */
+.popup-content {
+    overflow-x: auto;
+    max-height: 70vh;
+    padding-right: 0.5rem;
+}
+
+/* Individual journal entry content in popup */
+.entry-content {
+    overflow-x: auto;
+    max-height: 60vh;
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+/* Add new journal entry button */
+#addNewEntry {
+    background-color: #8c53ff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Hover effect for new entry button */
+#addNewEntry:hover {
+    background-color: #6A5ACD;
+}
+
+/* Container for habits section */
+#habit-container {
+    padding: 100px;
+}
+
+/* Button container for goal controls */
+#goalBtns-container {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Edit and Delete button styles */
+#editBtn, #deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Specific style for Edit button */
+#editBtn {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+/* Hover effect for Delete button */
+#deleteBtn:hover {
+    background-color: #8c55ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Hover effect for Edit button */
+#editBtn:hover {
+    background-color: #cbd5e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+    .calendar-day {
+        min-height: 100px !important; /* Smaller height for mobile */
+    }
+    
+    .journal-entry {
+        font-size: 0.75rem; /* Smaller text */
+        padding: 3px 4px;
+        margin-bottom: 3px;
+    }
+}

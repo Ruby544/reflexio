@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexio - Habit Tracker</title>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/d24c102f2a.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for habit functionality and logout logic -->
+    <script defer src="../../script/habitScript.js"></script>
+    <script defer src="../../script/logoutScript.js"></script>
+
+    <!-- Tailwind CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/habitStyle.css">
+
+    <!-- Additional Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header/Navbar Section -->
+    <header class="fixed top-0 left-0 w-full right-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 z-50 transition-transform duration-300 ease-in-out" id="main-header">
+        <div class="container mx-auto flex justify-between items-center px-4 space-y-4 sm:space-y-0">
+            
+            <!-- Menu Dropdown Navigation -->
+            <div class="dropdown py-3 px-8 rounded text-white">
+                <button class="dropbtn bg-white shadow-md px-4 py-2 sm:p-6 rounded-lg transform hover:scale-105 transition duration-300">
+                    Menu
+                </button>
+                <div class="dropdown-content bg-white shadow-md p-4 sm:p-6 rounded-lg mt-2">
+                    <a href="journal.html">📖 Journal</a>
+                    <a href="goals.html">🎯 Goals</a>
+                    <a href="habit.html">📆 Habits</a>
+                </div>
+            </div> 
+
+            <!-- App Title centered in header -->
+            <div class="container mx-auto px-4 flex items-center justify-between">
+                <a href="../dashboard.html">
+                    <h1 class="text-2xl sm:text-3xl font-bold absolute left-1/2 transform -translate-x-1/2" id="reflexio-title">Reflexio</h1>
+                </a>
+            </div>
+
+            <!-- Profile Dropdown with Profile and Logout -->
+            <div class="dropdown py-3 px-8 rounded text-white">
+                <button class="dropbtn bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+                    Profile
+                </button>
+                <div class="dropdown-content bg-white shadow-md p-6 rounded-lg">
+                    <a href="../login/profile.html">My Profile</a>
+                    <a href="#" onclick="logout()" class="text-red-500">Log-out</a>
+                </div>
+            </div> 
+        </div>
+    </header> 
+
+    <!-- Padding to make space for fixed header -->
+    <br><br><br><br><br><br>
+
+    <!-- Main Content Section -->
+    <main class="flex-grow p-4">
+        <!-- Page Title -->
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-6 p-4">Habit Trackers</h2>
+        
+        <!-- Add Habit Button -->
+        <button onclick="popup()" id="addHabitBtn" style="margin-left:10%;" class="w-full sm:w-auto bg-blue-600 text-white py-2 px-4 rounded transition">
+            + Add Habit
+        </button>
+
+        <!-- Habit Tracker Table Section -->
+        <div id="habit-container" class="max-w-screen-2xl mx-auto">
+
+            <!-- Month Navigation -->
+            <div class="flex items-center justify-center space-x-2 mt-4 mb-4">
+                <button id="prevMonth" class="px-2 py-2 bg-gray-200 rounded-lg">◀</button>
+                <h2 id="month-year" class="mx-4 text-lg font-bold"></h2>
+                <button id="nextMonth" class="px-2 py-2 bg-gray-200 rounded-lg">▶</button>
+            </div>
+
+            <!-- Habit Table Display -->
+            <div class="overflow-x: auto w-full ml-1">
+                <table class="min-w-[600px] w-full table-auto border-collapse ml-0">
+                    <thead>
+                        <tr id="days-header" class="bg-gray-100 text-sm md:text-base">
+                            <!-- Days of the month will be dynamically inserted here -->
+                            <th class="text-left py-3 px-4"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="habit-rows" class="text-sm md:text-base">
+                        <!-- Habit rows will be dynamically rendered via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full bg-gray-800 py-6">
+        <div class="mx-auto text-center text-white py-6">
+            <p>&copy; 2025 Reflexio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

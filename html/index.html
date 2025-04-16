@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexio - Index</title>
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- External style.css for custom styling -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Inline styles to define specific fonts for body and headings -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header Section: Contains navigation links for login and sign-up -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5 shadow-lg">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <!-- Logo for Reflexio centered -->
+      <h1 class="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2">Reflexio</h1>
+      
+      <!-- Navigation links for Log In and Sign Up -->
+      <nav class="ml-auto">
+        <a href="login/login.html" class="mr-4 text-white hover:underline">Log In</a>
+        <a href="login/signup.html" class="bg-white text-blue-600 py-2 px-4 rounded hover:bg-gray-200 transition">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section: Background image and main call to action -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image: url('https://via.placeholder.com/1920x1080');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+      <h2 class="text-5xl font-bold mb-4">Reflect, Grow, Thrive</h2>
+      <p class="text-xl max-w-2xl mb-6">Unlock the power of journaling to track your goals, habits, and emotional well-being in one beautiful space.</p>
+      <a href="login/signup.html" class="bg-purple-600 py-3 px-6 rounded text-white hover:bg-purple-700 transition">Start Your Journey</a>
+    </div>
+  </section>
+
+  <!-- Features Section: Highlights key features of Reflexio -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-10 text-gray-700">Discover What Reflexio Can Do for You</h3>
+      
+      <!-- Grid layout for displaying three features -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Feature 1: Goal Tracking -->
+        <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+          <a href="login/login.html" class="mr-4 text-white hover:underline">
+            <img src="images/goals.jpg" alt="Goal Tracking" class="mx-auto mb-4">
+          </a>
+          <h4 class="text-xl font-semibold mb-2">Goal Tracking</h4>
+          <p class="text-gray-600">Set and achieve meaningful goals with personalized insights.</p>
+        </div>
+
+        <!-- Feature 2: Habit Tracker -->
+        <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+          <a href="login/login.html" class="mr-4 text-white hover:underline">
+            <img src="images/habit.jpg" alt="Habit Tracker" class="mx-auto mb-4">
+          </a>
+          <h4 class="text-xl font-semibold mb-2">Habit Tracker</h4>
+          <p class="text-gray-600">Build habits that last with intuitive tracking and reminders.</p>
+        </div>
+
+        <!-- Feature 3: Journaling -->
+        <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+          <a href="login/login.html" class="mr-4 text-white hover:underline">
+            <img src="images/journal.jpg" alt="Years in Pixels" class="mx-auto mb-4">
+          </a>
+          <h4 class="text-xl font-semibold mb-2">Journaling</h4>
+          <p class="text-gray-600">Reflect and gain clarity through daily journaling that captures your thoughts and progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section: Displays user feedback -->
+  <section class="py-16 bg-gradient-to-r from-purple-50 to-blue-50">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-10 text-gray-700">What Our Users Say</h3>
+      
+      <!-- Grid layout for testimonials -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="p-6 bg-white shadow-lg rounded-lg">
+          <p class="text-gray-600 italic mb-4">"Reflexio has completely transformed how I track my goals and habits. I feel more in control of my growth than ever!"</p>
+          <h4 class="text-xl font-semibold text-gray-700">- Xan R.</h4>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-6 bg-white shadow-lg rounded-lg">
+          <p class="text-gray-600 italic mb-4">"The Years in Pixels feature is incredible. It helps me see my moods and productivity over time in such a clear way."</p>
+          <h4 class="text-xl font-semibold text-gray-700">- Emi K.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section: Encourages users to sign up -->
+  <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h4 class="text-2xl font-bold mb-4">Ready to Begin Your Reflection Journey?</h4>
+      <a href="login/signup.html" class="bg-white text-blue-600 py-2 px-6 rounded hover:bg-gray-200 transition">Sign Up Now</a>
+    </div>
+  </section>
+
+  <!-- Footer Section: Contains copyright information -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Reflexio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

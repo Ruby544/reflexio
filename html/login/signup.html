@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <!-- Character set and viewport meta tags for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons (e.g., eye icon for password toggle) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom styles for body and headings */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Styling for the main container */
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Styling for form labels */
+        .form-group label {
+            font-weight: 600;
+        }
+
+        /* Button styling for the submit button */
+        .btn-submit {
+            background: linear-gradient(to right, #4f46e5, #6b21a8);
+            color: white;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background: linear-gradient(to right, #6b21a8, #4f46e5);
+        }
+
+        /* Styling for password field with eye icon to toggle visibility */
+        .password-container {
+            position: relative;
+        }
+
+        /* Styling for the toggle password icon */
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6b7280;
+        }
+    </style>
+
+    <title>Reflexio - Signup</title>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5">
+    <div class="container mx-auto text-center">
+        <!-- Reflexio logo linking back to the home page -->
+        <a href="../index.html"><h1 class="text-3xl font-bold">Reflexio</h1></a>
+    </div>
+  </header> <br><br>
+
+<!-- Main Sign-Up Form Section -->
+<main class="container bg-white shadow-lg rounded-lg mt-10 p-8">
+    <h1 class="text-2xl font-bold text-center mb-6">Create Your Account</h1>
+    
+    <!-- Sign-up Form -->
+    <form action="../../php/signup_process.php" method="post" class="space-y-4">
+        
+        <!-- Surname Input Field -->
+        <div class="form-group">
+            <label for="surname" class="block text-gray-700"> Surname:</label>
+            <input type="text" id="surname" name="surname" 
+                   class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                   required>
+        </div>
+
+        <!-- Name Input Field -->
+        <div class="form-group">
+            <label for="name" class="block text-gray-700"> Name:</label>
+            <input type="text" id="name" name="name" 
+                   class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                   required>
+        </div>
+
+        <!-- Birthdate Input Field -->
+        <div class="form-group">
+            <label for="birthdate" class="block text-gray-700"> BirthDate:</label>
+            <input type="date" id="birthdate" name="birthdate" 
+                   class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                   required>
+        </div>
+
+        <!-- Email Input Field -->
+        <div class="form-group">
+            <label for="email" class="block text-gray-700"> Email:</label>
+            <input type="email" id="email" name="email" 
+                   class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                   required>
+        </div>
+
+        <!-- Username Input Field -->
+        <div class="form-group">
+            <label for="username" class="block text-gray-700"> Username:</label>
+            <input type="text" id="username" name="username" 
+                   class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                   required>
+        </div>
+
+        <!-- Password Input Field with Password Strength Validation -->
+        <div class="form-group">
+            <label for="password" class="block text-gray-700"> Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" 
+                       class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                       pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,12}$"
+    title="The password must contain at least one upper case letter, a number or a special character and it should be long between 8 and 12 characters"
+    minlength="8" maxlength="12" required >
+                <!-- Eye icon to toggle password visibility -->
+                <i class="toggle-password fas fa-eye" onclick="togglePassword('password')"></i>
+            </div>
+        </div>
+
+        <!-- Confirm Password Input Field -->
+        <div class="form-group">
+            <label for="confirm_password" class="block text-gray-700"> Confirm Password:</label>
+            <div class="password-container">
+                <input type="password" id="confirm_password" name="confirm_password" 
+                       class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300" 
+                       required>
+                <!-- Eye icon to toggle password visibility -->
+                <i class="toggle-password fas fa-eye" onclick="togglePassword('confirm_password')"></i>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" 
+        class="btn-submit w-full py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300">
+        Sign Up
+        </button>
+    </form>
+
+    <!-- Link to login page for existing users -->
+    <p class="mt-4 text-center text-gray-600">Do you already have an account? 
+    <a href="login.html" class="text-blue-600 hover:underline">Log In</a>
+    </p> 
+</main> <br><br>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4 text-center">
+    <p>&copy; 2025 Reflexio. All rights reserved.</p>
+    <!-- Link to help and support page -->
+    <a href="../help.html" class="text-blue-400 hover:underline">Help & Support</a>
+  </div>
+</footer>
+
+<!-- JavaScript for toggling password visibility -->
+<script>
+    function togglePassword(fieldId) {
+        const passwordField = document.getElementById(fieldId);
+        const eyeIcon = passwordField.nextElementSibling;
+        
+        // Toggle between password and text input types for visibility
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        }
+    }
+</script>
+
+</body>
+</html>

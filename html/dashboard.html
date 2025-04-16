@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Reflexio - Home Page</title>
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Add Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- External style.css file for additional styling -->
+  <link rel="stylesheet" href="../css/style.css">   
+  
+  <body class="bg-gray-100">
+  
+    <!-- Navbar Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+          
+          <!-- Menu Dropdown Button -->
+          <div class="dropdown py-3 px-8 rounded text-white hover: transition">
+            <button class="dropbtn bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300"> Menu
+            </button>
+            <div class="dropdown-content bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+              <a href="features/journal.html">📖 Journal</a>
+              <a href="features/goals.html">🎯 Goals</a>
+              <a href="features/habit.html">📆 Habits</a>
+            </div>
+          </div> 
+
+          <!-- Reflexio Logo and Home Link -->
+          <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="dashboard.html">
+              <h1 class="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2" id="reflexio-title">Reflexio</h1>
+            </a>
+          </div>
+
+          <!-- Profile Dropdown Menu -->
+          <div class="dropdown py-3 px-8 rounded text-white hover: transition">
+            <button class="dropbtn bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300"> Profile </button>
+            <div class="dropdown-content bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+              <a href="login/profile.html"> My Profile </a>
+              <a href="#" onclick="logout()" class="text-red-500"> Log-out</a>
+            </div>
+          </div> 
+          
+        </div>
+    </header>
+
+    <!-- Dashboard Main Content -->
+    <main class="container mx-auto mt-8 p-6">
+        <h2 class="text-2xl font-bold mb-4">Welcome to the Dashboard!</h2>
+
+        <!-- Grid layout for different sections -->
+        <div class="grid grid-cols-3 gap-6">
+        
+            <!-- Journal Summary Section -->
+            <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+              <a href="features/journal.html" class="text-blue-500 hover:underline">
+                <img src="images/journal.jpg" alt="Goal Tracking" class="mx-auto mb-4">
+              </a>
+              <h3 class="text-xl font-semibold">📖 Latest Journal Entry</h3>
+              <p class="text-gray-700">"Today I learned something new..."</p>
+              <a href="features/journal.html" class="text-blue-500">View More</a>
+            </div>
+
+            <!-- Goal Tracking Section -->
+            <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+              <a href="features/goals.html" class="text-blue-500 hover:underline">
+                <img src="images/goals.jpg" alt="Goal Tracking" class="mx-auto mb-4">
+              </a>
+              <h3 class="text-xl font-semibold">🎯 Goal Progress</h3>
+              <p class="text-gray-700">You have completed <strong>3/5</strong> goals!</p>
+              <a href="features/goals.html" class="text-blue-500">Track Goals</a>
+            </div>
+
+            <!-- Habit Tracker Section -->
+            <div class="bg-white shadow-md p-6 rounded-lg transform hover:scale-105 transition duration-300">
+              <a href="features/habit.html" class="text-blue-500 hover:underline">
+                <img src="images/habit.jpg" alt="Habit Tracker" class="mx-auto mb-4">
+              </a>
+              <h3 class="text-xl font-semibold">📆 Habit Completion</h3>
+              <p class="text-gray-700">You maintained 85% consistency this month.</p>
+              <a href="features/habit.html" class="text-blue-500">View Habits</a>
+            </div>
+        
+        </div>
+    </main> <br><br>
+    
+    <!-- Logout Function -->
+    <script>
+      function logout() {
+        // Send a request to the server to destroy the session
+        fetch("../php/profile/logout.php", {
+            method: "GET",
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                // Redirect to the index page after logging out
+                window.location.href = "index.html";
+            } else {
+                alert("Error logging out. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.error("Logout Error:", error);
+            alert("An error occurred while logging out.");
+        });
+    }
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="w-full bg-gray-800 mt-auto">
+      <div class="mx-auto text-center text-white py-6">
+        <p>&copy; 2025 Reflexio. All rights reserved.</p>
+      </div>
+    </footer>
+
+</body>
+</html>
