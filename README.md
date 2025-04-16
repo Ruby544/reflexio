@@ -22,5 +22,4 @@ To successfully run the web application locally, follow these steps:
  2. **Set Up the Project Files**: Download the Reflexio project folder from GitHub. Unzip the folder and move the folder to the following directory on your computer: C:/xampp/htdocs. This will allow the project to be hosted on XAMPP virtual server.
  3. **Start Required Services**: Open the XAMPP Control Panel and start both the Apache and MySQL modules by clicking the "Start" buttons next to each service.
  4. **Import the Database**: Open a web browser and go to http://localhost/phpmyadmin. Create a new database (e.g., reflexio) and import the SQL file provided in the GitHub repository to set up the necessary tables and data. This can be done using the Import tab in phpMyAdmin.
-5. **Launch the Web Application**: Open a web browser and enter the following URL: http://localhost/reflexio/index.html. The home page of the application should now be displayed.
-
+5. **Launch the Web Application**: Open a web browser and enter the following URL: http://localhost/reflexio-main/html/index.html if you saved the folder in htdocs. The home page of the application should now be displayed.
