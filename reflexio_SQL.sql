@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 16, 2025 alle 18:56
+-- Creato il: Apr 16, 2025 alle 19:28
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -46,7 +46,9 @@ INSERT INTO `goals` (`goal_id`, `title`, `deadline`, `progress`, `description`, 
 (31, 'Study ITSM', '2004-04-20', 10, 'Study for the exam of ITSM', 'low', 2),
 (34, 'Bake', '2026-05-05', 40, 'Learn to bake an apple pie', 'low', 6),
 (35, 'coding', '2025-06-15', 30, 'Code the project', 'high', 2),
-(39, 'Learn PHP', '2025-05-02', 20, 'I want to learn php', 'high', 8);
+(39, 'Learn PHP', '2025-05-02', 20, 'I want to learn php', 'high', 8),
+(40, 'coding', '2026-01-01', 10, 'Code stands for', 'high', 2),
+(41, 'coding', '2025-05-05', 10, 'code', 'low', 2);
 
 -- --------------------------------------------------------
 
@@ -74,7 +76,9 @@ INSERT INTO `habits` (`habit_id`, `title`, `times_monthly`, `completed_days`, `c
 (57, 'Treadmill', 5, '{\"2025-04\":[7,6,5,3,4,10,9,8]}', '2025-04-14 12:11:53', 6),
 (58, 'Treadmill', 6, '{\"2025-04\":[8,9,10,11,12]}', '2025-04-15 09:27:52', 2),
 (64, 'Study', 5, '{\"2025-04\":[5,6,7,8]}', '2025-04-16 11:29:19', 6),
-(66, 'Treadmill', 4, '{\"2025-04\":[16,15,14,13]}', '2025-04-16 14:23:04', 8);
+(66, 'Treadmill', 4, '{\"2025-04\":[16,15,14,13]}', '2025-04-16 14:23:04', 8),
+(67, 'Treadmill', 4, '{\"2025-04\":[9,10,11]}', '2025-04-16 17:16:53', 2),
+(68, 'study', 3, '{\"2025-04\":[9,10]}', '2025-04-16 17:24:47', 2);
 
 -- --------------------------------------------------------
 
@@ -103,7 +107,9 @@ INSERT INTO `journal_entries` (`journal_id`, `entry_date`, `title`, `content`, `
 (16, '2025-04-08', 'Iqtidar', 'Ae Ishq Awalda Daku Maahi\nDo Nain Milake Lut Lenda\nAe Ishq Na Tera Mera Mahi\nAe Baldi Agg Wich Sut Deda\nAe Baldi Agg Vich Sut Denda\n\nDil Mein Hai Kya Aankhon Mein Hai Kya\nTum Ho Wahi Ya Waham Hai Koi\nMera Dil Bata\n\nIs Aag Mein Kyun Jalate Ho Tum\nDushman Mera Lagta Jese Koi Tabeeb Sa\n\nMayal Hone Laga Hai Ye Man\nKhone Laga Hai Ye Dil\nRito’n Riwajo’n Ko Tod Do Ya\nAa Ke Kabhi Yaar Mil\n\nMera Hi Ye Dil Ab Na Mera Raha\n\nIshq Rulaave Ishq Hasaave\nIshq Piyaave Dar-Dar Kamla\nIshq Nachaave Ishq Gavaave\nIshq Banaave Jag Vich Chhala\n\nIshq Rulaave Ishq Hasaave\nIshq Piyaave Dar-Dar Kamla\nIshq Nachaave Ishq Gavaave\nIshq Banaave Jag Vich Chhala\n\nVaar Dilon Pe Karte Nahi\nZakhm Judaai Wale Bharte Nahi\nKhoon Jigar Maaf Kaise Karoon\nMain Bhool Jaoon Yeh Bhi Mumkin Nahi\n\nEk Dil Jo Dard Ka Maara Hai\nJo Paas Tha Woh Sab Hara Hai\nIs Baat Ko Koi Jaane Na\nEk Dushman Jaan Se Pyaara Hai\n\nKhwabon Ka Jahan Barbaad Hua\n\nIshq Rulaave Ishq Hasaave\nIshq Piyaave Dar-Dar Kamla\nIshq Nachaave Ishq Gavaave\nIshq Banaave Jag Vich Chhala\n\nIshq Rulaave Ishq Hasaave\nIshq Piyaave Dar-Dar Kamla\nIshq Nachaave Ishq Gavaave\nIshq Banaave Jag Vich Chhala', '2025-04-14 11:34:43', '2025-04-14 11:34:43', 5),
 (17, '2025-04-14', 'bake a cake', 'Today I baked a cake', '2025-04-14 11:42:06', '2025-04-14 11:42:06', 6),
 (18, '2025-04-15', 'Try', 'Today I recorded the screen', '2025-04-15 09:17:41', '2025-04-15 09:23:35', 6),
-(23, '2025-04-16', 'input', 'Today I\'m showing my website dasd', '2025-04-16 14:19:07', '2025-04-16 14:19:13', 8);
+(23, '2025-04-16', 'input', 'Today I\'m showing my website dasd', '2025-04-16 14:19:07', '2025-04-16 14:19:13', 8),
+(24, '2025-04-16', 'Try', 'Today I went....', '2025-04-16 17:16:22', '2025-04-16 17:16:22', 2),
+(25, '2025-04-17', 'Try', '....', '2025-04-16 17:24:12', '2025-04-16 17:24:12', 2);
 
 -- --------------------------------------------------------
 
@@ -126,7 +132,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `surname`, `name`, `birthdate`, `email`, `username`, `password`) VALUES
-(2, 'park', 'ruby', '2004-04-04', 'rubs@gmail.com', 'Rub', '$2y$10$bo2baOe8ePDx.FdJWwG9tuldLXfmtmLWio6c2rDFJvXjYIIdJ7WuK'),
+(2, 'park', 'ruby', '2004-04-04', 'rubs@gmail.com', 'Rub', '$2y$10$jcEQ7w.X9Ab9Pau8Vj/2QuV4O4u1UsDjGqNafS0q3sYk47QZ4/soS'),
 (5, 'Kelly', 'Luke', '1996-05-01', 'luk3@yahoo.com', 'luk3', '$2y$10$A2vcd.O.hTbKomxc1n6PLectm0X3JIscr2H0lcMrPpvQW8HfuPdjC'),
 (6, 'Rossi', 'Stefano', '1990-05-01', 'Stef@gmail.com', 'stef', '$2y$10$jdeiYhhoy0t9IcwLlpL7.OopDPpfYIlg8c/XNIl6ElB7QJvyAtQHm'),
 (8, 'maybe', 'someone', '2002-05-04', 'loc@gmail.com', 'maybe', '$2y$10$T2P27UDCU7Ao5C4YUOo1geFN2C.1SbT0qTzzusNwBLRijNrmXeH9y');
@@ -170,19 +176,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `goals`
 --
 ALTER TABLE `goals`
-  MODIFY `goal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `goal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT per la tabella `habits`
 --
 ALTER TABLE `habits`
-  MODIFY `habit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `habit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT per la tabella `journal_entries`
 --
 ALTER TABLE `journal_entries`
-  MODIFY `journal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `journal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT per la tabella `users`
