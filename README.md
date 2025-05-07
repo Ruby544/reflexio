@@ -41,6 +41,6 @@ To successfully run the web application locally, follow these steps:
  4. Import the SQL file provided in the GitHub repository to set up the necessary tables and data. This can be done using the "Import" tab in phpMyAdmin.
 ### Launch the Web Application: 
 1. Open a new tab in the same web browser or a new web browser.
-2. enter the following URL: http://localhost/reflexio-main/html/index.html if you saved the folder in htdocs.
-3. If you saved the file in some other folder enter the URL: http://localhost/path to your folder/reflexio-main/html/index.html. 
+2. enter the following URL: http://localhost/reflexio-main/app/html/index.html if you saved the folder in htdocs.
+3. If you saved the file in some other folder enter the URL: http://localhost/path to your folder/reflexio-main/app/html/index.html. 
 4. The home page of the application should now be displayed.
